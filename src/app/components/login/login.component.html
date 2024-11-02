@@ -1,0 +1,32 @@
+
+<form (ngSubmit)="adduserform(formRef)" #formRef="ngForm" >
+
+
+
+    <div class="form-group">
+        <label for="age">age</label>
+        <input  type="number"  required class="form-control" id="age" name="age" ngModel>
+        
+    </div>
+    <div class="form-group">
+        <label for="name">name</label>
+        <input class="form-control" required  id="name" name="name" ngModel>
+        
+    </div>
+    <div class="form-group">
+        <label for="password">password</label>
+        <input type="password" required class="form-control" id="password" name="password" ngModel>
+        
+    </div>
+    <div class="form-group">
+        <label for="email">email </label>
+        <input type="text" required class="form-control" id="email" name="email" ngModel>
+            
+    </div>
+  
+   
+    
+    <button type="submit" [disabled]="formRef.invalid" class="bttn">submit</button>
+    
+    
+    </form>

@@ -1,0 +1,14 @@
+<div>
+@if(selectedproduct){
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" [src]="selectedproduct.imgURL" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Name:{{selectedproduct.title}}</h5>
+          <p class="card-text">decription:{{selectedproduct.description}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+}@else {
+    No product
+}
+</div>

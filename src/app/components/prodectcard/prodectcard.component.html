@@ -1,0 +1,13 @@
+ <a [routerLink]="['/product-details/',dynamicproduct.id]">
+<div class="card  " >
+  <img [src]="dynamicproduct.imgURL" class="card-img-top  img-w-5" alt="not found">
+  <div class="card-body bg-dark text-light">
+      <p class="TEXT"> <span class="fw-bold">name: </span>{{dynamicproduct.title}}</p>
+      <p class="TEXT"> <span class="fw-bold">id: </span>{{dynamicproduct.id}}</p>
+      <p class="TEXT"> <span class="fw-bold">quantity: </span>{{dynamicproduct.quantity}}</p>
+      <p class="TEXT"> <span class="fw-bold">price:</span>{{dynamicproduct.price}}</p>
+      <button class="btn btn-info" (click)="handaddtocart($event)">add to cart</button>
+    </div>
+  </div>
+</a>
+

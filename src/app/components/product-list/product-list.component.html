@@ -1,0 +1,14 @@
+
+
+<div >
+@for (item of this.product; track item.id) {
+
+    <app-prodectcard [dynamicproduct]="item"></app-prodectcard>
+}@empty {
+    no product to display
+}
+
+</div>
+ 
+
+

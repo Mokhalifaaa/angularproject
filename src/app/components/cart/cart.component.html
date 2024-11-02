@@ -1,0 +1,23 @@
+<div>
+    @for (product of this.cartserves.cartItems; track product.id) {
+    <div class="card">
+        <div>
+
+            <img class="imag" [src]="product.imgURL" alt="not found">
+        </div>
+        <div>
+            <p>name:{{product.title}}</p>
+            <p>description:{{product.description}}</p>
+            <p>quantity:{{product.quantity}}</p>
+            <button class="btn  btn-info" (click)="this.cartserves.incresquantity(product.id)">+</button>
+            <button class="btn  btn-info w-1" (click)="deletefromcart(product)">remove</button>
+
+            <button class="btn  btn-info w-1" (click)="this.cartserves.decresquantity(product.id)">-</button>
+        </div>
+    </div>
+
+    }@empty {
+    no product to dispaly
+    }
+    <h2>totel:{{cartserves.gettotel()}}</h2>
+</div>
